@@ -1,6 +1,6 @@
-<div align="left" weight="50px"><img src="http://newtrend.bg/wp-content/uploads/2015/03/SoftUni-Logo.png"></div>
+<div align="left"><img src="http://newtrend.bg/wp-content/uploads/2015/03/SoftUni-Logo.png" height="42" width="42"></div>
 </br>
-<div align="center" colr="#ff0000"><b>Intro Programming Fundamentals </b></div>
+<div align="center"><b>Intro Programming Fundamentals </b></div>
 <div align="center"><b>Jan 2017</b></div>
 
 <ul>
