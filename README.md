@@ -2,10 +2,10 @@
 <div align="center"><b>Jan 2017</b></div>
 
 <table>
-<tr>
+<td>
 <div align="right"><img src="http://newtrend.bg/wp-content/uploads/2015/03/SoftUni-Logo.png" height="100"></div>
-</tr>
-<tr>
+</td>
+<td>
 <ul>
 <li>2.1 Data Types and Variables </li>
 
@@ -53,5 +53,5 @@
 
 <li>15 Practical Еxam 26-Feb Sunday 15:00-22:00 Team</li>
 </ul>
-</tr>
+</td>
 <table>
