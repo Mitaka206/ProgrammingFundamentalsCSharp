@@ -1,4 +1,4 @@
-<div align="center">------------------------------------------------------</div>
+<div align="reight"><img src="http://newtrend.bg/wp-content/uploads/2015/03/SoftUni-Logo.png" weight="50px"></div>
 </br>
 <div align="center" colr="#ff0000"><b>Intro Programming Fundamentals </b></div>
 <div align="center"><b>Jan 2017</b></div>
