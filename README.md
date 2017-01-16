@@ -1,4 +1,4 @@
-<table border="0">
+<table border="0px">
 <tr><td><div align="center"><b>Intro Programming Fundamentals </b></div>
 <div align="center"><b>Jan 2017</b></div></td>
 <td>
