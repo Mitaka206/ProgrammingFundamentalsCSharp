@@ -1,8 +1,9 @@
-<div align="center"><b>Intro Programming Fundamentals </b></div>
-<div align="center"><b>Jan 2017</b></div>
-
 <table border="0">
+<td><div align="center"><b>Intro Programming Fundamentals </b></div>
+<div align="center"><b>Jan 2017</b></div></td>
 <td>
+<div align="right"><img src="http://newtrend.bg/wp-content/uploads/2015/03/SoftUni-Logo.png" height="100"></div>
+</td><td>
 <ul>
 <li>2.1 Data Types and Variables </li>
 
@@ -51,7 +52,5 @@
 <li>15 Practical Еxam 26-Feb Sunday 15:00-22:00 Team</li>
 </ul>
 </td>
-<td>
-<div align="right"><img src="http://newtrend.bg/wp-content/uploads/2015/03/SoftUni-Logo.png" height="100"></div>
-</td>
+
 <table>
