@@ -1,5 +1,3 @@
-<html>
-<body background="https://image.freepik.com/free-vector/modern-abstract-background_1048-1003.jpg">
 <table>
 <tr><td><div align="center"><b>Intro Programming Fundamentals </b></div>
 <div align="center"><b>Jan 2017</b></div></td>
@@ -56,4 +54,3 @@
 </ul>
 </td>
 <table>
-</body></html>
