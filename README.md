@@ -1,7 +1,6 @@
-<div align="left"><img src="http://newtrend.bg/wp-content/uploads/2015/03/SoftUni-Logo.png" height="100"></div>
-</br>
 <div align="center"><b>Intro Programming Fundamentals </b></div>
 <div align="center"><b>Jan 2017</b></div>
+<div align="left"><img src="http://newtrend.bg/wp-content/uploads/2015/03/SoftUni-Logo.png" height="100"></div>
 
 <ul>
 <li>2.1 Data Types and Variables </li>
