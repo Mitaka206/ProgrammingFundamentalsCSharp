@@ -1,3 +1,4 @@
+<html>
 <body background="https://image.freepik.com/free-vector/modern-abstract-background_1048-1003.jpg">
 <table>
 <tr><td><div align="center"><b>Intro Programming Fundamentals </b></div>
@@ -54,5 +55,5 @@
 <li>15 Practical Еxam 26-Feb Sunday 15:00-22:00 Team</li>
 </ul>
 </td>
-
 <table>
+</body></html>
