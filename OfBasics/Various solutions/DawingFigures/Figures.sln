@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquareCover", "ConsoleApplication2\SquareCover.csproj", "{B2277FF8-FABE-44D2-8CF1-550B747E7CED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chritmasTree", "chritmasTree\chritmasTree.csproj", "{720F2621-FDC2-444E-BC2E-7E7A71EF4886}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DNA", "DNA\DNA.csproj", "{7ACF5CF0-2F2C-4083-A05B-5E157C4B157F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2277FF8-FABE-44D2-8CF1-550B747E7CED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2277FF8-FABE-44D2-8CF1-550B747E7CED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2277FF8-FABE-44D2-8CF1-550B747E7CED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2277FF8-FABE-44D2-8CF1-550B747E7CED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{720F2621-FDC2-444E-BC2E-7E7A71EF4886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{720F2621-FDC2-444E-BC2E-7E7A71EF4886}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{720F2621-FDC2-444E-BC2E-7E7A71EF4886}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{720F2621-FDC2-444E-BC2E-7E7A71EF4886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ACF5CF0-2F2C-4083-A05B-5E157C4B157F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ACF5CF0-2F2C-4083-A05B-5E157C4B157F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ACF5CF0-2F2C-4083-A05B-5E157C4B157F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ACF5CF0-2F2C-4083-A05B-5E157C4B157F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
