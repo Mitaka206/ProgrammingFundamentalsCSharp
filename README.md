@@ -7,6 +7,8 @@
 </td></tr>
 <td>
 <ul>
+<li>Exams </li>
+
 <li>2.1 Data Types and Variables </li>
 
 <li>2.2 Data Types and Variables - Exercises </li>
