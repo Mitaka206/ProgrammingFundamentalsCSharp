@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 <table border="0px">
-=======
 <table align="center">
->>>>>>> 162229de87707f612d2b2ff8fdfe56d338de6f4f
 <tr><td><div align="center"><b>Intro Programming Fundamentals </b></div>
 <div align="center"><b>Jan 2017</b></div></td>
 <td>
