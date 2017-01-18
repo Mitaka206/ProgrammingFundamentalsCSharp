@@ -14,9 +14,9 @@ namespace p01_Centuries_to_Minutes
             int cenure = int.Parse(Console.ReadLine());
 
             int years = cenure * 100;
-            int days = (int)(years*365.2224);
+            int days = (int)(years*365.2422);
             int hours = days * 24;
-            long minutes = hours * 60;
+            int minutes = hours * 60;
 
             Console.WriteLine($"{cenure} cenuturies = {years} years = {days} days = {hours} hours = {minutes} minutes");
 
