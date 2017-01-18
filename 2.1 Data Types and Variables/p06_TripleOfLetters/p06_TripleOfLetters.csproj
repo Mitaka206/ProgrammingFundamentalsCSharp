@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{244886F1-8180-4227-82F1-736F1A3C7EAD}</ProjectGuid>
+    <ProjectGuid>{1A415A0E-36FB-42E9-B7EE-466EC55DAB80}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>p00_Demo</RootNamespace>
-    <AssemblyName>p00_Demo</AssemblyName>
+    <RootNamespace>p06_TripleOfLetters</RootNamespace>
+    <AssemblyName>p06_TripleOfLetters</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="p08_RefactorVolumePiramid.cs" />
+    <Compile Include="p06_TripleOfLetters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
