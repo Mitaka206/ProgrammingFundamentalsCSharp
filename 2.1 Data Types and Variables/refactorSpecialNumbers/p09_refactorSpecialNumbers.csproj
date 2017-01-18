@@ -4,19 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-<<<<<<< HEAD
-    <ProjectGuid>{D3195EF9-E8A7-40B4-9B07-5081C0F16B9F}</ProjectGuid>
+    <ProjectGuid>{C60F1452-7019-40AD-91E2-AFED18F1A32E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>p02_Circle_Area</RootNamespace>
-    <AssemblyName>p02_Circle_Area</AssemblyName>
-=======
-    <ProjectGuid>{9858DE8E-9249-4227-80C2-9D181760A19F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>p02_Circle_Area</RootNamespace>
-    <AssemblyName>p02_Circle Area</AssemblyName>
->>>>>>> 66a715ffca19d27fe2fb49a254d796d2705673f9
+    <RootNamespace>refactorSpecialNumbers</RootNamespace>
+    <AssemblyName>refactorSpecialNumbers</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -51,11 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Program.cs" />
-=======
-    <Compile Include="p02_Circle Area.cs" />
->>>>>>> 66a715ffca19d27fe2fb49a254d796d2705673f9
+    <Compile Include="p09_refactorSpecialNumbers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

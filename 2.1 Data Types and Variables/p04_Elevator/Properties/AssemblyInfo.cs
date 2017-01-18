@@ -5,18 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("p02_Circle Area")]
+[assembly: AssemblyTitle("p04_Elevator")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-<<<<<<< HEAD
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("p02_Circle Area")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2017")]
-=======
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("p02_Circle Area")]
+[assembly: AssemblyProduct("p04_Elevator")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
->>>>>>> 66a715ffca19d27fe2fb49a254d796d2705673f9
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -26,11 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-<<<<<<< HEAD
-[assembly: Guid("d3195ef9-e8a7-40b4-9b07-5081c0f16b9f")]
-=======
-[assembly: Guid("9858de8e-9249-4227-80c2-9d181760a19f")]
->>>>>>> 66a715ffca19d27fe2fb49a254d796d2705673f9
+[assembly: Guid("2187cf20-8c0b-40cb-ab15-7caef246562a")]
 
 // Version information for an assembly consists of the following four values:
 //
