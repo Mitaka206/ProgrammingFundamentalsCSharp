@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace p05_ExchangeValues
 {
-    class Program
+    class p05_ExchangeValues
     {
         static void Main(string[] args)
         {

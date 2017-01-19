@@ -8,14 +8,12 @@ class p08_VowelOrDigits
 {
     public static void Main(string[] args)
     {
-        string input = Console.ReadLine();
-
-        char vowel = Convert.ToChar(input);
+        char input = char.Parse(Console.ReadLine());
         
+        
+        bool isVowel = (input == 'a' || input == 'e' || input == 'i' || input == 'o' || input == 'u');
 
-        bool isVowel = (vowel == 'a' || vowel == 'e' || vowel == 'i' || vowel == 'o' || vowel == 'u');
-
-        bool isDigit = (vowel <= 9 && vowel >= 0);
+        bool isDigit = (input >= '0' && input <= '9');
 
         if (isVowel)
         {

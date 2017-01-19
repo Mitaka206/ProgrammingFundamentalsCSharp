@@ -10,8 +10,8 @@ namespace p02_PracticeFloatingPoints
     {
         static void Main(string[] args)
         {
-            double dobNum = double.Parse(Console.ReadLine());
-            double flNum = double.Parse(Console.ReadLine());
+            decimal dobNum = decimal.Parse(Console.ReadLine());
+            decimal flNum = decimal.Parse(Console.ReadLine());
             decimal decNum = decimal.Parse(Console.ReadLine());
 
             Console.WriteLine(dobNum);
