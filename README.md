@@ -53,7 +53,7 @@
 
 <li>14 Exam Preparation IV </li>
 
-<li>15 Practical Еxam 26-Feb Sunday 15:00-22:00 Team</li>
+<li>15 Practical Еxam 26-Feb Sunday 15:00-22:00 h</li>
 </ul>
 </td>
 <table>
