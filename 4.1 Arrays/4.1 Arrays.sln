@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04_TrippleSum", "p04_Tripp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05_RoundNumbersFromZero", "p05_RoundNumbersFromZero\p05_RoundNumbersFromZero.csproj", "{5434646A-5DCF-4D85-AEF9-FE654986AEF6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06_ReverseArrayOfStrings", "p06_ReverseArrayOfStrings\p06_ReverseArrayOfStrings.csproj", "{1A682435-5602-4D86-82E9-AD7652FF5BA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p07_SumArrays", "p07_SumArrays\p07_SumArrays.csproj", "{71BC563C-81D0-4FB9-B029-7D2D650406F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{5434646A-5DCF-4D85-AEF9-FE654986AEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5434646A-5DCF-4D85-AEF9-FE654986AEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5434646A-5DCF-4D85-AEF9-FE654986AEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A682435-5602-4D86-82E9-AD7652FF5BA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A682435-5602-4D86-82E9-AD7652FF5BA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A682435-5602-4D86-82E9-AD7652FF5BA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A682435-5602-4D86-82E9-AD7652FF5BA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71BC563C-81D0-4FB9-B029-7D2D650406F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71BC563C-81D0-4FB9-B029-7D2D650406F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71BC563C-81D0-4FB9-B029-7D2D650406F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71BC563C-81D0-4FB9-B029-7D2D650406F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

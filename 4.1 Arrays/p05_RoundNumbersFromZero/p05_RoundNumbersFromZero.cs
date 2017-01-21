@@ -12,15 +12,14 @@ namespace p05_RoundNumbersFromZero
         {
             string[] input = Console.ReadLine().Split();
 
-            decimal[] numbers = new decimal[input.Length];
+            double[] numbers = new double[input.Length];
             
             for (int i = 0; i < numbers.Length; i++)
             {
-                numbers[i] = decimal.Parse(input[i]);
+                numbers[i] = double.Parse(input[i]);
 
-                Console.WriteLine($"{numbers[i]} => {Math.Round(numbers[i])}");
+                Console.WriteLine($"{numbers[i]} => {Math.Round(numbers[i], 0, MidpointRounding.AwayFromZero)}");
             }
-            //whay don't working
         }
     }
 }
