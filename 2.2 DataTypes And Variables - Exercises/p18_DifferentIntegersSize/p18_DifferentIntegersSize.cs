@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace p18_DifferentIntegersSize
 {
@@ -10,7 +11,7 @@ namespace p18_DifferentIntegersSize
     {
         static void Main(string[] args)
         {
-            decimal input = decimal.Parse(Console.ReadLine());
+            BigInteger input = BigInteger.Parse(Console.ReadLine());
 
             bool isSbyte = (input <= sbyte.MaxValue && input >= sbyte.MinValue);
             bool isByte = (input <= byte.MaxValue && input >= byte.MinValue);
@@ -19,10 +20,10 @@ namespace p18_DifferentIntegersSize
             bool isInt = (input <= int.MaxValue && input >= int.MinValue);
             bool isUint = (input <= uint.MaxValue && input >= uint.MinValue);
             bool islong = (input <= long.MaxValue && input >= long.MinValue);
-            bool isUlong = (input <= ulong.MaxValue && input >= ulong.MinValue);
+           // bool isUlong = (input <= ulong.MaxValue && input >= ulong.MinValue);
 
             
-            if (isSbyte || isByte || isShort || isUshort || isInt || isUint || islong || isUlong)
+            if (isSbyte || isByte || isShort || isUshort || isInt || isUint || islong)//|| isUlong
             {
                 Console.WriteLine($"{input} can fit in:");
 
@@ -54,10 +55,10 @@ namespace p18_DifferentIntegersSize
                 {
                     Console.WriteLine("* long");
                 }
-                else if (isUlong)
-                {
-                    Console.WriteLine("* ulong");
-                }
+                //else if (isUlong)
+                //{
+                //    Console.WriteLine("* ulong");
+                //}
             }
             else
             {
