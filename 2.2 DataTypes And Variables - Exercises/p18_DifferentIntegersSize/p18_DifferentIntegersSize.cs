@@ -21,6 +21,7 @@ namespace p18_DifferentIntegersSize
             bool islong = (input <= long.MaxValue && input >= long.MinValue);
             bool isUlong = (input <= ulong.MaxValue && input >= ulong.MinValue);
 
+            
             if (isSbyte || isByte || isShort || isUshort || isInt || isUint || islong || isUlong)
             {
                 Console.WriteLine($"{input} can fit in:");

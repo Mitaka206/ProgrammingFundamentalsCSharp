@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p18_DifferentIntegersSize",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p12_RectangleProperties", "p12_RectangleProperties\p12_RectangleProperties.csproj", "{D073F6A4-3820-4064-9DFF-4A33609670E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p11_ConvertSpeedUnits", "p11_ConvertSpeedUnits\p11_ConvertSpeedUnits.csproj", "{2BBF76B1-637F-464F-8E89-E31D215FD943}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{D073F6A4-3820-4064-9DFF-4A33609670E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D073F6A4-3820-4064-9DFF-4A33609670E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D073F6A4-3820-4064-9DFF-4A33609670E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BBF76B1-637F-464F-8E89-E31D215FD943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BBF76B1-637F-464F-8E89-E31D215FD943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BBF76B1-637F-464F-8E89-E31D215FD943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BBF76B1-637F-464F-8E89-E31D215FD943}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
