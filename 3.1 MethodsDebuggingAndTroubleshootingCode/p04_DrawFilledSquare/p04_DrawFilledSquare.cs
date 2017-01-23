@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _04_DrawFilledSquare
+namespace p04_DrawFilledSquare
 {
     class p04_DrawFilledSquare
     {

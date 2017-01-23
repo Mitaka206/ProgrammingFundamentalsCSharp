@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("04_DrawFilledSquare")]
+[assembly: AssemblyTitle("p04_DrawFilledSquare")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("04_DrawFilledSquare")]
+[assembly: AssemblyProduct("p04_DrawFilledSquare")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1d5ef4c0-3ce6-4759-9ad9-3d3b7adcc472")]
+[assembly: Guid("fe24f237-c47d-45fa-a00d-b823556e167b")]
 
 // Version information for an assembly consists of the following four values:
 //

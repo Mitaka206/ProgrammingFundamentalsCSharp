@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace p08_MultiplyEvensByOdds
 {
     class p08_MultiplyEvensByOdds

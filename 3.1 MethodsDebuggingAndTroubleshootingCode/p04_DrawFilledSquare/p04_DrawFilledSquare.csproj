@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1D5EF4C0-3CE6-4759-9AD9-3D3B7ADCC472}</ProjectGuid>
+    <ProjectGuid>{FE24F237-C47D-45FA-A00D-B823556E167B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_04_DrawFilledSquare</RootNamespace>
-    <AssemblyName>04_DrawFilledSquare</AssemblyName>
+    <RootNamespace>p04_DrawFilledSquare</RootNamespace>
+    <AssemblyName>p04_DrawFilledSquare</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
