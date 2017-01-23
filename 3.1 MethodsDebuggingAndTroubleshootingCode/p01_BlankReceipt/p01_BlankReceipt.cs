@@ -10,7 +10,12 @@ namespace p01_BlankReceipt
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("nekakav text");
+            PrintHeader();
+        }
+
+        static void PrintHeader()
+        {
+            Console.WriteLine("-----------------");
         }
     }
 }
