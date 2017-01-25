@@ -8,22 +8,29 @@ namespace p06_PrimeChecker
         {
             long n = long.Parse(Console.ReadLine());
 
-            Console.WriteLine(IsPrime(n));
+            bool prime = IsPrime(n);
+
+            Console.WriteLine(prime);
         }
 
-        public static bool IsPrime(long number)
+        private static bool IsPrime(long n)
         {
-            if (number == 1 && number == 0) return false;
-            if (number == 2) return true;
+            bool prime = true;
 
-            int fibonachi = (int)Math.Floor(Math.Sqrt(number));
-
-            for (int i = 2; i <= fibonachi; ++i)
+            if (n == 0 || n == 1)
             {
-                if (number % i == 0) return false;
+                prime = false;
             }
 
-            return true;
+            for (int i = 2; i <= Math.Sqrt(n); i++)
+            {
+                if (n % i == 0)
+                {
+                    prime = false;
+                }
+            }
+
+            return prime;
         }
     }
 }

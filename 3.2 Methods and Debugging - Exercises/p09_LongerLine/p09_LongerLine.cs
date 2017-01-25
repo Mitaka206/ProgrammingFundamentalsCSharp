@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace p09_LongerLine
 {
@@ -6,35 +7,75 @@ namespace p09_LongerLine
     {
         static void Main(string[] args)
         {
-            var x1 = double.Parse(Console.ReadLine());//3
-            var x2 = double.Parse(Console.ReadLine());//4
+            {
+                double x1 = double.Parse(Console.ReadLine());
+                double y1 = double.Parse(Console.ReadLine());
 
-            var y1 = double.Parse(Console.ReadLine());
-            var y2 = double.Parse(Console.ReadLine());
+                double x2 = double.Parse(Console.ReadLine());
+                double y2 = double.Parse(Console.ReadLine());
 
-            var z1 = double.Parse(Console.ReadLine());
-            var z2 = double.Parse(Console.ReadLine());
+                double x3 = double.Parse(Console.ReadLine());
+                double y3 = double.Parse(Console.ReadLine());
 
-            var f1 = double.Parse(Console.ReadLine());
-            var f2 = double.Parse(Console.ReadLine());
+                double x4 = double.Parse(Console.ReadLine());
+                double y4 = double.Parse(Console.ReadLine());
 
-            //double dist1 = Math.Max(DistanceToZero(x1, x2), DistanceToZero(y1, y2));
-            //double dist2 = Math.Max(DistanceToZero(z1, z2), DistanceToZero(f1, f2));
+                double line1 = Math.Sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+                double line2 = Math.Sqrt((x3 - x4) * (x3 - x4) + (y3 - y4) * (y3 - y4));
 
-            //double maxDist1 = Math.Max(dist1, dist2);
+                if (line1 >= line2)
+                {
+                    bool first = true;
+                    if (Math.Sqrt(x1 * x1 + y1 * y1) > Math.Sqrt(x2 * x2 + y2 * y2))
+                        first = false;
+                    if (first)
+                        Console.WriteLine($"({x1}, {y1})({x2}, {y2})");
+                    else Console.WriteLine($"({x2}, {y2})({x1}, {y1})");
+                }
+                else
+                {
+                    bool first = true;
+                    if (Math.Sqrt(x3 * x3 + y3 * y3) > Math.Sqrt(x4 * x4 + y4 * y4))
+                        first = false;
+                    if (first)
+                        Console.WriteLine($"({x3}, {y3})({x4}, {y4})");
+                    else Console.WriteLine($"({x4}, {y4})({x3}, {y3})");
+                }
+            }
+            //var x1 = double.Parse(Console.ReadLine());//3
+            //var y1 = double.Parse(Console.ReadLine());//4
 
-            //double dist3 = Math.Max(DistanceToZero(z1, z2), DistanceToZero(y1, y2));
-            //double dist4 = Math.Max(DistanceToZero(x1, x2), DistanceToZero(f1, f2));
+            //var x2 = double.Parse(Console.ReadLine());
+            //var y2 = double.Parse(Console.ReadLine());
 
-            //double maxDist2 = Math.Min(dist1, dist2);
-            
-        }
+            //var x3 = double.Parse(Console.ReadLine());
+            //var y3 = double.Parse(Console.ReadLine());
 
-        public static double DistanceToZero(double x1, double x2)
-        {
-            double dist = Math.Sqrt(Math.Abs(x1 * x1 + x2 * x2));
+            //var x4 = double.Parse(Console.ReadLine());
+            //var y4 = double.Parse(Console.ReadLine());
 
-            return dist;
+            //double max1 = Math.Max(Math.Max(DistanceToZero(x1, y1), DistanceToZero(x2, y2)), Math.Max(DistanceToZero(x3, y3), DistanceToZero(x4, y4)));
+            //double max2 = Math.Max(Math.Max(DistanceToZero(x4, y4), DistanceToZero(x1, y1)), (DistanceToZero(x2, y2)));
+
+            //var distance = new double[4];
+
+            //distance[0] = DistanceToZero(x1, y1);
+            //distance[1] = DistanceToZero(x2, y2);
+            //distance[2] = DistanceToZero(x3, y3);
+            //distance[3] = DistanceToZero(x4, y4);
+
+            //foreach (var values in distance.OrderBy(x => x).Skip(2).ToArray())
+            //{
+            //    Console.WriteLine(string.Join(" | ", values));
+            //}
+            // }
+
+            //public static double DistanceToZero(double x, double y)
+            //{
+            //    double distance = Math.Sqrt(Math.Abs(x * x + y * y));
+
+            //    return distance;
+            //}
         }
     }
 }
