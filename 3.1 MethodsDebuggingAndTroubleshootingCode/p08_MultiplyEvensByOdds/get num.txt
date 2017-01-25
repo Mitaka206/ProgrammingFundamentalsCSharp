@@ -1,0 +1,11 @@
+﻿public static int GetDigits(int num,)
+        {
+            var result = 0;
+
+            foreach (var symbol in num.ToString())
+            {
+                var digit = symbol - '0';
+            }
+
+            return result;
+        }
