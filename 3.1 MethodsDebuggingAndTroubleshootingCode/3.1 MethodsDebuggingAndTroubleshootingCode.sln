@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p00_Demo", "p00_Demo\p00_Demo.csproj", "{502FD75E-30C8-41B5-A2F5-5F4E5369B585}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p01_BlankReceipt", "p01_BlankReceipt\p01_BlankReceipt.csproj", "{2124D6B2-1100-4822-9F1D-D7E1333EF9F5}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p02_SingOfIntegerNumber", "p02_SingOfIntegerNumber\p02_SingOfIntegerNumber.csproj", "{193A358A-953C-4D3E-93F1-9237C09C9453}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03_PrintTriangle", "p03_PrintTriangle\p03_PrintTriangle.csproj", "{C582C884-9694-4398-84BF-AB2473BAD45D}"
@@ -31,14 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{502FD75E-30C8-41B5-A2F5-5F4E5369B585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{502FD75E-30C8-41B5-A2F5-5F4E5369B585}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{502FD75E-30C8-41B5-A2F5-5F4E5369B585}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{502FD75E-30C8-41B5-A2F5-5F4E5369B585}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2124D6B2-1100-4822-9F1D-D7E1333EF9F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2124D6B2-1100-4822-9F1D-D7E1333EF9F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2124D6B2-1100-4822-9F1D-D7E1333EF9F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2124D6B2-1100-4822-9F1D-D7E1333EF9F5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{193A358A-953C-4D3E-93F1-9237C09C9453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{193A358A-953C-4D3E-93F1-9237C09C9453}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{193A358A-953C-4D3E-93F1-9237C09C9453}.Release|Any CPU.ActiveCfg = Release|Any CPU
