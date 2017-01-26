@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace p07_SumArrays
 {
@@ -10,30 +7,51 @@ namespace p07_SumArrays
     {
         static void Main(string[] args)
         {
-            string[] firstNumbers = "1 2 3 4 5".Split();//Console.ReadLine().Split();
-            string[] secondNumbers = "1 2 ".Split(); //Console.ReadLine().Split();
+            int[] arr1 = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int[] arr2 = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            int[] maxArray = new int[Math.Max(arr1.Length, arr2.Length)];
+            int sum = Math.Max(arr1.Length, arr2.Length);
 
-            // 1 2 3 4 5
-            // 5 4 3 _ _
+            for (int i = 0; i <= maxArray.Length; i++)
+            {
+                sum = (arr1[i % arr1.Length] + arr2[i % arr2.Length]);
+                if (i >= maxArray.Length)
+                {
+                    break;
+                }
+                Console.Write(sum + " ");
+            }
+            Console.WriteLine();
+            //---------------------------------------------------------------------------------------------------------------------------
 
-            //var maxLength = Math.Max(firstNumbers.Length, secondNumbers.Length);
+            //string[] first = Console.ReadLine().Split();
+            //string[] second = Console.ReadLine().Split();
 
-            //int[] first = new int[maxLength];
-            //string[] second = new string[maxLength];//5
+            //int[] num = new int[first.Length];
+            //int[] nums = new int[second.Length];
 
-            //for (int i = 0; i < maxLength; i++)
+            //int max = Math.Max(first.Length, second.Length);
+
+            //int[] sums = new int[max];
+
+            //for (int i = 0; i < first.Length; i++)
             //{
-            //    second[i] = secondNumbers[i];
+            //    num[i] = int.Parse(first[i]);
             //}
 
-            //int[] sum = new int[firstNumbers.Length];
-
-            //for (int i = 0; i < firstNumbers.Length; i++)
+            //for (int i = 0; i < second.Length; i++)
             //{
-            //    sum[i] = first[i] + int.Parse(second[i]);
+            //    nums[i] = int.Parse(second[i]);
             //}
-            //Console.WriteLine(string.Join(", ", sum));
 
+            //for (int i = 0; i < max; i++)
+            //{
+            //    sums[i] = num[i % num.Length] + nums[i % nums.Length];
+            //}
+
+            //Console.WriteLine(string.Join(" ", sum));
+
+            //---------------------------------------------------------------------------------------------------------------------------
         }
     }
 }
