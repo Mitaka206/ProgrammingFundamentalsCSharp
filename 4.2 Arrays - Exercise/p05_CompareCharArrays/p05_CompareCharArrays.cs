@@ -21,16 +21,51 @@ namespace p05_CompareCharArrays
             {
                 second[i] = char.Parse(secondLine[i]);
             }
-            
-            if (second.Length > first.Length)
+
+            CompareCharArrays(first, second);
+        }
+
+        private static void CompareCharArrays(char[] first, char[] second)
+        {
+            int minChars = Math.Min(first.Length, second.Length);
+
+            int countFirst = 0;
+            int countSecond = 0;
+
+            bool areDiferent = false;
+            for (int i = 0; i < minChars; i++)
             {
-                Console.WriteLine(string.Join("", second));
-                Console.WriteLine(string.Join("", first));
+                if (first[i] > second[i])
+                {
+                    countFirst++;
+                    Console.WriteLine(string.Join("", second));
+                    Console.WriteLine(string.Join("", first));
+                    areDiferent = true;
+                    break;
+                }
+                else if (first[i] < second[i])
+                {
+                    countSecond++;
+                    Console.WriteLine(string.Join("", first));
+                    Console.WriteLine(string.Join("", second));
+                    areDiferent = true;
+                    break;
+                }
             }
-            else
+
+            if (!areDiferent)
             {
-                Console.WriteLine(string.Join("", first));
-                Console.WriteLine(string.Join("", second));
+                if (countFirst <= countSecond)
+                {
+                    Console.WriteLine(string.Join("", first));
+                    Console.WriteLine(string.Join("", second));
+                }
+                else
+                {
+                    Console.WriteLine(string.Join("", second));
+                    Console.WriteLine(string.Join("", first));
+
+                }
             }
         }
     }
