@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace p03_SumAdjacentEqualNumbers
@@ -8,22 +7,31 @@ namespace p03_SumAdjacentEqualNumbers
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split().Select(int.Parse).ToList();
-
+            var input = Console.ReadLine().Split().Select(double.Parse).ToList();
+            
             int sum = 0;
 
-            List<int> sumList = new List<int>();
-
-            for (int i = 1; i < input.Count; i++)
+            while (sum < input.Count - 1)
             {
-                if (input[i] == input[i-1])
+                if (input[sum] == input[sum + 1])
                 {
-                    sum = input[i] + input[i - 1];
-                    input[i] = sum;
+                    input[sum] += input[sum + 1];
+
+                    input.RemoveAt(sum + 1);
+
+                    sum--;
+
+                    if (sum < 0)
+                    {
+                        sum = 0;
+                    }
                 }
-                sumList.Add(sum);
+                else
+                {
+                    sum++;
+                }
             }
-            Console.WriteLine(string.Join(" ", sumList));
+            Console.WriteLine(string.Join(" ", input));
         }
     }
 }

@@ -11,6 +11,7 @@ namespace p01_RemoveNegativesAndReverse
             
                 input.RemoveAll(x => x < 0);
                 input.Reverse();
+
             if (input.Count > 0)
             {
                 Console.WriteLine(string.Join(" ", input));
