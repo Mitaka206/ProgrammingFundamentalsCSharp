@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05_SortNumbers", "p05_Sort
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06_SquareNumbers", "p06_SquareNumbers\p06_SquareNumbers.csproj", "{6CCA2D56-4D2D-47D0-878F-36EA63A6F1E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p07_CountNumbers", "p07_CountNumbers\p07_CountNumbers.csproj", "{46695928-EEB2-4659-A3F4-48F4EA42C241}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{6CCA2D56-4D2D-47D0-878F-36EA63A6F1E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CCA2D56-4D2D-47D0-878F-36EA63A6F1E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CCA2D56-4D2D-47D0-878F-36EA63A6F1E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46695928-EEB2-4659-A3F4-48F4EA42C241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46695928-EEB2-4659-A3F4-48F4EA42C241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46695928-EEB2-4659-A3F4-48F4EA42C241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46695928-EEB2-4659-A3F4-48F4EA42C241}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

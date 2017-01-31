@@ -8,29 +8,19 @@ namespace p03_SumAdjacentEqualNumbers
         static void Main(string[] args)
         {
             var input = Console.ReadLine().Split().Select(double.Parse).ToList();
-            
-            int sum = 0;
 
-            while (sum < input.Count - 1)
+            for (int j = 0; j < input.Count; j++)
             {
-                if (input[sum] == input[sum + 1])
+                for (int i = 1; i < input.Count; i++)
                 {
-                    input[sum] += input[sum + 1];
-
-                    input.RemoveAt(sum + 1);
-
-                    sum--;
-
-                    if (sum < 0)
+                    if (input[i - 1] == input[i])
                     {
-                        sum = 0;
+                        input[i - 1] += input[i];
+                        input.Remove(input[i]);
                     }
                 }
-                else
-                {
-                    sum++;
-                }
             }
+
             Console.WriteLine(string.Join(" ", input));
         }
     }

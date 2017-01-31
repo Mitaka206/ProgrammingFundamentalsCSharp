@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace p06_SquareNumbers
 {
@@ -12,9 +10,19 @@ namespace p06_SquareNumbers
         {
             var input = Console.ReadLine().Split().Select(int.Parse).ToList();
 
-            var output = input.RemoveAll(x => Math.Sqrt(x) != 0);
+            List<int> output = new List<int>();
 
-            Console.WriteLine(string.Join(" ", output));//fuck
+            for (int i = 0; i < input.Count; i++)
+            {
+                var square = Math.Sqrt(input[i]);
+
+                if (square == (int)square)
+                {
+                    output.Add(input[i]);
+                }
+            }
+            output = output.OrderByDescending(x => x).ToList();
+            Console.WriteLine(string.Join(" ", output));
         }
     }
 }
