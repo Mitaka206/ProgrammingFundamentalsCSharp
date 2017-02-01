@@ -18,6 +18,7 @@ namespace p03_ArrayManipulator
             int index = 0;
             int element = 0;
             int position = 0;
+            int contains = 0;
 
             while (!command.Equals("print"))
             {
@@ -29,10 +30,18 @@ namespace p03_ArrayManipulator
                         input.Insert(index, element);
                         break;
 
-                    case "contains":
-                        index = actions[0];
-                        Console.WriteLine(input.Contains(index));
-                        break;
+                    //case "contains":
+                    //    index = actions[0];
+                    //    if (input.Contains(index))
+                    //    {
+                    //        contains = input.IndexOf(index);
+                    //    }
+                    //    else
+                    //    {
+                    //        contains = -1;
+                    //    }
+                        
+                    //    break;
 
                     case "addMany":
                         index = actions[0];
@@ -55,15 +64,13 @@ namespace p03_ArrayManipulator
                         input.Sum();
                         break;
 
-                    default:
-                        Console.WriteLine();break;
                 }
 
                 command = Console.ReadLine();
             }
 
-
-            Console.WriteLine(string.Join(" ", input));
+            Console.WriteLine(contains);
+            Console.WriteLine($"[{string.Join(", ", input)}]");
         }
     }
 }
