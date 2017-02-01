@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>palindromes for String</Title>
+			<Shortcut>palindrom</Shortcut>
+			<Description>Code snippet for Palindrom bool </Description>
+			<Author>mitaka206</Author>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+			<![CDATA[private static bool IsPalindrome(string word)
+        {
+            int rightIndex = word.Length - 1;
+            int leftIndex = 0;
+
+            bool isPalindrome = true;
+
+            while (rightIndex >= leftIndex)
+            {
+                if (word[rightIndex] != word[leftIndex])
+                {
+                    isPalindrome = false;
+                }
+                rightIndex--;
+                leftIndex++;
+            }
+            return isPalindrome;
+        }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

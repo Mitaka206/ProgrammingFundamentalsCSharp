@@ -42,40 +42,6 @@ namespace p09_LongerLine
                     else Console.WriteLine($"({x4}, {y4})({x3}, {y3})");
                 }
             }
-            //var x1 = double.Parse(Console.ReadLine());//3
-            //var y1 = double.Parse(Console.ReadLine());//4
-
-            //var x2 = double.Parse(Console.ReadLine());
-            //var y2 = double.Parse(Console.ReadLine());
-
-            //var x3 = double.Parse(Console.ReadLine());
-            //var y3 = double.Parse(Console.ReadLine());
-
-            //var x4 = double.Parse(Console.ReadLine());
-            //var y4 = double.Parse(Console.ReadLine());
-
-            //double max1 = Math.Max(Math.Max(DistanceToZero(x1, y1), DistanceToZero(x2, y2)), Math.Max(DistanceToZero(x3, y3), DistanceToZero(x4, y4)));
-            //double max2 = Math.Max(Math.Max(DistanceToZero(x4, y4), DistanceToZero(x1, y1)), (DistanceToZero(x2, y2)));
-
-            //var distance = new double[4];
-
-            //distance[0] = DistanceToZero(x1, y1);
-            //distance[1] = DistanceToZero(x2, y2);
-            //distance[2] = DistanceToZero(x3, y3);
-            //distance[3] = DistanceToZero(x4, y4);
-
-            //foreach (var values in distance.OrderBy(x => x).Skip(2).ToArray())
-            //{
-            //    Console.WriteLine(string.Join(" | ", values));
-            //}
-            // }
-
-            //public static double DistanceToZero(double x, double y)
-            //{
-            //    double distance = Math.Sqrt(Math.Abs(x * x + y * y));
-
-            //    return distance;
-            //}
         }
     }
 }

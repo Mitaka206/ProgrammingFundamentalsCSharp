@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Fibonachi</Title>
+			<Shortcut>fib</Shortcut>
+			<Description>Code snippet for fibonachi</Description>
+			<Author>mitaka206</Author>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+			<![CDATA[private static void FibonachiNum(int n)
+        {
+            int f0 = 1;
+            int fibonachi = 1;
+            for (int i = 0; i < n - 1; i++)
+            {
+                int fn = f0 + fibonachi;
+                f0 = fibonachi;
+                fibonachi = fn;
+            }
+            Console.WriteLine(fibonachi);
+        }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

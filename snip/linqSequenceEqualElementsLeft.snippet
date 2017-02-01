@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Max of Equal Elements</Title>
+			<Shortcut>seq</Shortcut>
+			<Description>Code snippet for Max of Equal Elements</Description>
+			<Author>mitaka206</Author>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+			<![CDATA[int[] max = seq.Select((n, i) => new { Value = n, Index = i })
+            .Select((o, i) => new { Value = o.Value, Diff = i - o.Index })
+            .GroupBy(s => new { s.Value, s.Diff })
+            .OrderByDescending(g => g.Count())
+            .First()
+            .Select(f => f.Value)
+            .ToArray();
+			// 2 2 2 1 1 1 5 5 6 8 -> 2 2 2]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

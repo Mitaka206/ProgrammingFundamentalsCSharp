@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace p18_SequencCommands
 {
-    class Program
+    class p18_SequencCommands
     {
         private const char ArgumentsDelimiter = ' ';
         static void Main()

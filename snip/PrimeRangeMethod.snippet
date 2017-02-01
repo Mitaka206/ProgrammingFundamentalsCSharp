@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>PrimesRange</Title>
+			<Shortcut>primR</Shortcut>
+			<Description>Code snippet for Primes Range </Description>
+			<Author>mitaka206</Author>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+			<![CDATA[public static List<int> IsPrime(int start, int end)
+        {
+            List<int> primes = new List<int>();
+
+            if (start < 2)
+            {
+                start = 2;
+            }
+
+            for (int i = start; i <= end; i++)
+            {
+                bool isPrime = true;
+                for (int j = 2; (j * j) <= i; j++)
+                {
+                    if ((i % j) == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime)
+                {
+                    primes.Add(i);
+                }
+            }
+            return primes;
+        }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

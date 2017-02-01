@@ -7,9 +7,9 @@ namespace p06_MaxSequenceEqualElements
     {
         public static void Main()
         {
-            int[] seq = Console.ReadLine().Split().Select(int.Parse).ToArray();//new int[] { 2, 1, 1, 1, 1, 2, 3, 3, 2, 2, 2, 1 };
+            int[] seq = Console.ReadLine().Split().Select(int.Parse).ToArray();//new int[] { 2, 1, 1, 1, 1, 2, 3, 3, 2, 2, 2, 1 };*/
 
-           var max = seq.Select((n, i) => new { Value = n, Index = i })
+            int[] max = seq.Select((n, i) => new { Value = n, Index = i })
             .OrderBy(s => s.Value)
             .Select((o, i) => new { Value = o.Value, Diff = i - o.Index })
             .GroupBy(s => new { s.Value, s.Diff })
@@ -20,7 +20,8 @@ namespace p06_MaxSequenceEqualElements
 
             Console.Write(string.Join(" ", max));
         }
-    } }
+    }
+}
 
         //static void Main(string[] args)
         //{

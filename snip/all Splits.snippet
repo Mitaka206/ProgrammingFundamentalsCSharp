@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>All char Splits FOR TEXT</Title>
+			<Shortcut>spl</Shortcut>
+			<Description>Code snippet for All char Splits </Description>
+			<Author>mitaka206</Author>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+			<![CDATA[char[] delimiters = ",;:.!()\"\'\\/[] ".ToCharArray();
+
+            List<string> input = Console.ReadLine().Split(delimiters, StringSplitOptions.RemoveEmptyEntries).ToList();]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

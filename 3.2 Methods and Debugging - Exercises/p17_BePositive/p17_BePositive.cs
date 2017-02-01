@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace p17_BePositive
 {
-    class Program
+    class p17_BePositive
     {
         static void Main(string[] args)
         {
