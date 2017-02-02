@@ -11,20 +11,23 @@ namespace p03_AMinerTask
 
             var resources = new Dictionary<string, long>();
 
-            while (!resourceType.Equals("stop"))
+            while (resourceType != "stop")
             {
-                long resourceQuantity = long.Parse(Console.ReadLine());
+                long quantity = long.Parse(Console.ReadLine());
 
-                //if (!resources.ContainsKey(resourceType))
-                //{
-                //    resources[resourceType] = 0;
-                //}
+                if (!resources.ContainsKey(resourceType))
+                {
+                    resources[resourceType] = 0;
+                }
 
-                //resources[resourceType] += resourceQuantity;
-
-                Console.WriteLine($"{resourceType} -> {resourceQuantity}");
-
+                resources[resourceType] += quantity;
+                
                 resourceType = Console.ReadLine();
+            }
+
+            foreach (var item in resources)
+            {
+                Console.WriteLine($"{item.Key} -> {item.Value}");
             }
         }
     }
