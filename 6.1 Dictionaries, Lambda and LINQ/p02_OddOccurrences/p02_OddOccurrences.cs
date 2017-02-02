@@ -23,8 +23,18 @@ namespace p02_OddOccurrences
                 }
                 dictCount[item]++;
             }
-            // to do.....
-            
+
+            List<string> output = new List<string>();
+
+            foreach (var item in dictCount)
+            {
+                if (item.Value %2 != 0)
+                {
+                    output.Add(item.Key); 
+                }
+            }
+
+            Console.WriteLine(string.Join(", ", output));
         }
     }
 }

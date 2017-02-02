@@ -8,69 +8,89 @@ namespace p03_ArrayManipulator
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split().Select(int.Parse).ToList();
+            List<int> input = Console.ReadLine().Split().Select(int.Parse).ToList();
 
-            var commandLine = Console.ReadLine().Split().ToList();
-
-            string command = commandLine[0];
-            var actions = commandLine.Skip(1).Select(int.Parse).ToArray();
-
-            int index = 0;
-            int element = 0;
-            int position = 0;
-            int contains = 0;
-
-            while (!command.Equals("print"))
+            string[] commandLine = Console.ReadLine().Split().ToArray();
+            
+            while (!commandLine[0].Equals("print"))
             {
-                switch (command)
+                switch (commandLine[0])
                 {
                     case "add":
-                        index = actions[0];
-                        element = actions[1];
+                        int index = int.Parse(commandLine[1]);
+                        int element = int.Parse(commandLine[2]);
                         input.Insert(index, element);
                         break;
 
-                    //case "contains":
-                    //    index = actions[0];
-                    //    if (input.Contains(index))
-                    //    {
-                    //        contains = input.IndexOf(index);
-                    //    }
-                    //    else
-                    //    {
-                    //        contains = -1;
-                    //    }
-                        
-                    //    break;
+                    case "contains":
+                        index = int.Parse(commandLine[1]);
+                        if (input.Contains(index))
+                        {
+                            var output = input.ToArray();
+                            Console.WriteLine(Array.IndexOf(output, index));
+                        }
+                        else
+                        {
+                            Console.WriteLine(-1);
+                        }
+                        break;
 
                     case "addMany":
-                        index = actions[0];
-                        for (int i = 1; i < actions.Length; i++)
+                        int fromPosition = int.Parse(commandLine[1]);
+                        if (fromPosition > input.Count)
                         {
-                            element = actions[i];
-                            input.Insert(index, element);
+                            break;
+                        }
+                        for (int i = commandLine.Length - 1; i >= 2; i--)
+                        {
+                            input.Insert(fromPosition, (int.Parse)(commandLine[i]));
                         }
                         break;
 
                     case "remove":
-                        index = actions[0];
+                        index = int.Parse(commandLine[1]);
+                        input.RemoveAt(index);
                         break;
 
                     case "shift":
-                        position = actions[0];
+                        fromPosition = int.Parse(commandLine[1]);
+                        RotateLeft(input, fromPosition);
+
                         break;
 
                     case "sumPairs":
-                        input.Sum();
+                        for (int i = 0; i < input.Count; i++)
+                        {
+                            input[i] += input[i + 1];
+                            input.RemoveAt(i + 1);
+                        }
                         break;
-
                 }
 
-                command = Console.ReadLine();
+                commandLine = Console.ReadLine().Split().ToArray();
             }
-
-            Console.WriteLine(contains);
+            
             Console.WriteLine($"[{string.Join(", ", input)}]");
+        }
+        public static void RotateLeftOnce(List<int> input)
+        {
+            int numToSwitch = input[0];
+            for (int i = 0; i < input.Count; i += 1)
+            {
+                if (i + 1 < input.Count)
+                {
+                    int switcher = input[i];
+                    input[i] = input[i + 1];
+                    input[i + 1] = switcher;
+                }
+            }
+        }
+        public static void RotateLeft(List<int> input, int positions)
+        {
+            for (var i = 0; i < positions; i += 1)
+            {
+                RotateLeftOnce(input);
+            }
         }
     }
 }

@@ -8,7 +8,10 @@ namespace p01_CountRealNumbers
     {
         static void Main(string[] args)
         {
-            var input = Console.ReadLine().Split().Select(double.Parse).ToList();
+            var input = Console.ReadLine()
+                .Split()
+                .Select(double.Parse)
+                .ToList();
 
             var dictCount = new SortedDictionary<double, int>();
             
