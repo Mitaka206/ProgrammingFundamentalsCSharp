@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace p10_СръбскоUnleashed
 {
@@ -11,50 +12,74 @@ namespace p10_СръбскоUnleashed
             string input = Console.ReadLine();
 
             string name = string.Empty;
-            string money = string.Empty;
-            var title = new List<string>();
 
-            var cast = new Dictionary<string, string>();
+            string moneyString = string.Empty;
+            var moneyList = new List<int>();
+            int ticketsPrice = 0;
+            int ticketsCount = 0;
+
+            var cast = new Dictionary<string, int>();
+            var titleList = new List<string>();
+            var titleString = string.Empty;
+
+            var output = new Dictionary<string, Dictionary<string, int>>();
 
             while (input != "End")
             {
-                name = input.Split('@')
+                string correctInputPattern = @"(([a-zA-Z]+\s){1,3})@(([a-zA-Z]+\s){1,3})(\d+)\s(\d+)";
+
+                if (Regex.IsMatch(input, correctInputPattern))
+                {
+                    name = input.Split('@')
                     .First()
                     .Trim();
-                money = input.Split(new string[] { "@Sunny Beach ", "@Belgrade ", }, StringSplitOptions.RemoveEmptyEntries)
-                    .Last()
-                    .ToString();
-               // int moneys = MoneyInt(money);
 
-                title = input.Split('@', ' ')
-                    .Skip(2)
-                    .Reverse()
-                    .Skip(2)
-                    .Reverse()
-                    .ToList();
+                    moneyString = input.Split(new string[] { "@Sunny Beach ", "@Belgrade ", }, StringSplitOptions.RemoveEmptyEntries)
+                        .Last()
+                        .ToString();
+                    moneyList = moneyString.Split(new char[] { ' ', '@' }, StringSplitOptions.RemoveEmptyEntries)
+                        .Select(int.Parse)
+                        .ToList();
+                    ticketsPrice = moneyList[0];
+                    ticketsCount = moneyList[1];
 
-                //if (name == "Sunny Beach" || name != "Belgrade")
-                //{
-                //    cast[name] += 0;
-                //}
-                //Console.WriteLine(money);
-                //input = Console.ReadLine();
+                    titleList = input.Split(new char[] { '@' }, StringSplitOptions.RemoveEmptyEntries)
+                        .Skip(1)
+                        .ToList();
+                    titleList = titleList.ToString().Split()
+                        .Take(1)
+                        .ToList();
+                    //titleString = 
+
+                    if (!cast.ContainsKey(name))
+                    {
+                        cast[name] = 0;
+                    }
+                    cast[name] += ticketsCount * ticketsPrice;
+                    ////-------------------------------------------------Help Me, Please !-------------------
+                    //if (!output.ContainsKey(titleList))
+                    //{
+                    //    output[titleList] = new Dictionary<string, int>();
+                    //}
+                    //output[titleList] = cast;
+                    ////--------------------------------------^^^^^^^-------^------------------------^-------------
+                }
+
+                input = Console.ReadLine();
             }
 
-            foreach (var item in cast)
+            Console.WriteLine(string.Join(" ", titleList));
+            //---------------------------------------------------------------------------------------
+            //foreach (var item in output)
+            //{
+           // Console.WriteLine(string.Join(" ", item));
+            //--------------------------------------------^^^^^^-------------------------------^-----
+            foreach (var casts in cast.OrderByDescending(x => x.Value).ThenBy(x => x.Key))
             {
-                Console.WriteLine(string.Join(" ", title));
-                Console.WriteLine($"{item.Key} -> {item.Value}");
+                Console.WriteLine($"#  {casts.Key} -> {casts.Value}");
             }
-            
-            //Console.WriteLine(money);
 
-            //Console.WriteLine(string.Join(" ", title));
-        }
-
-        private static int MoneyInt(string money)
-        {
-            return int.Parse(money);
+            //}
         }
     }
 }
