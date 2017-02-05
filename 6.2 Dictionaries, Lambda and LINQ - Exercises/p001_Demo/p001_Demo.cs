@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace p001_Demo
 {
@@ -7,32 +8,75 @@ namespace p001_Demo
     {
         static void Main(string[] args)
         {
-            var outDict = new Dictionary<string, int>();
 
-            string input = Console.ReadLine();
+            Dictionary<string, int> legendaryMats = new Dictionary<string, int>();
+            legendaryMats["motes"] = 0;
+            legendaryMats["fragments"] = 0;
+            legendaryMats["shards"] = 0;
 
-            while (!input.Equals("end"))
+            SortedDictionary<string, int> junkMats = new SortedDictionary<string, int>();
+
+            char[] ignore = new char[] { ' ' };
+            while (true)
             {
-                string[] inputIp = input.Split();
-                
-                string ip = inputIp[0];
+                var input = Console.ReadLine().ToLower().Split().ToList();
 
-                foreach (var item in inputIp)
+                for (int i = 0; i < input.Count; i += 2)
                 {
-                    if (!outDict.ContainsKey(ip))
+                    string itemType = input[i + 1];
+                    int itemQuantity = Convert.ToInt32(input[i]);
+
+                    if (itemType == "motes" || itemType == "fragments" || itemType == "shards")
                     {
-                        outDict[ip] = 0;
+                        legendaryMats[itemType] += itemQuantity;
+
+                        if (legendaryMats.Values.Max() >= 250)
+                        {
+                            if (legendaryMats["shards"] >= 250)
+                            {
+                                Console.WriteLine("Shadowmourne obtained!");
+                                legendaryMats["shards"] -= 250;
+                            }
+
+                            if (legendaryMats["fragments"] >= 250)
+                            {
+                                Console.WriteLine("Valanyr obtained!");
+                                legendaryMats["fragments"] -= 250;
+                            }
+
+                            if (legendaryMats["motes"] >= 250)
+                            {
+                                Console.WriteLine("Dragonwrath obtained!");
+                                legendaryMats["motes"] -= 250;
+                            }
+
+                            goto here;
+                        }
                     }
-                    outDict[ip]++;
+                    else
+                    {
+                        if (!junkMats.ContainsKey(itemType))
+                        {
+                            junkMats[itemType] = itemQuantity;
+                        }
+                        else
+                        {
+                            junkMats[itemType] += itemQuantity;
+                        }
+                    }
                 }
-                input = Console.ReadLine();
             }
 
-            foreach (var item in outDict)
+        here:
+            foreach (KeyValuePair<string, int> kvp in legendaryMats.OrderByDescending(x => x.Value).ThenBy(x => x.Key))
             {
-                Console.WriteLine($"{item.Key} => {item.Value}");
+                Console.WriteLine($"{kvp.Key}: {kvp.Value}");
             }
-            
+
+            foreach (KeyValuePair<string, int> kvp in junkMats)
+            {
+                Console.WriteLine($"{kvp.Key}: {kvp.Value}");
+            }
         }
         
     }

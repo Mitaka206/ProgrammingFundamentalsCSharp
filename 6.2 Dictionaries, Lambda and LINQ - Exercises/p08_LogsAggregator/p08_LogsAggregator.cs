@@ -11,6 +11,7 @@ namespace p08_LogsAggregator
             int n = int.Parse(Console.ReadLine());
 
             var output = new SortedDictionary<string, int>();
+            var list = new List<string>();
 
             var mazalo = new SortedDictionary<SortedDictionary<string, int>, List<string>>();
 
@@ -31,17 +32,10 @@ namespace p08_LogsAggregator
                 }
                 output[name] += duration;
 
-                //if (!mazalo.ContainsValue(list<string>))
-                //{
-
-                //}
-                
-            }
-            foreach (var item in output)
-            {
-                Console.WriteLine($"{item.Key}: {item.Value} ");  
+                //??????????????
 
             }
+
         }
     }
 }
