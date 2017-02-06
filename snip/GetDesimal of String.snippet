@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeSnippets  xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>get Desimal from String</Title>
+			<Shortcut>getDesimal</Shortcut>
+			<Description>Code snippet for get Desimal from String</Description>
+			<Author>mitaka206</Author>
+		</Header>
+		<Snippet>
+			<Code Language="csharp">
+			<![CDATA[public static decimal[] getDesimal(string input)
+    {
+        int n = 0;
+        MatchCollection matches = Regex.Matches(input, @"[+-]?\d+(\.\d+)?");
+        decimal[] decimalarray = new decimal[matches.Count];
+
+        foreach (Match m in matches)
+        {
+            decimalarray[n] = decimal.Parse(m.Value);
+            n++;
+        }
+        return decimalarray;
+    }]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

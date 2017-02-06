@@ -17,21 +17,31 @@ class p03_NetherRealms
         {
             var toChar = players[i].Where(c => Char.IsLetter(c)).ToList();
             var intSum = toChar.Select(c => (decimal)c).Sum();
-            
-            var toDesimal = getDesimal(players[i]).ToList();
-            var desimaSum = toDesimal.Sum();
 
-            var skils = new List<decimal>() { intSum, desimaSum };
+            var toDesimal = getDesimal(players[i]).ToList();
+            var desimalSum = toDesimal.Sum();
+
+            foreach (char c in players[i].Where(c => c == '*' || c == '/'))
+            {
+                if (c == '*')
+                {
+                    desimalSum *= 2;
+                }
+                else
+                {
+                    desimalSum /= 2;
+                }
+            }
 
             if (!output.ContainsKey(players[i]))
             {
-                output[players[i]] = skils;
+                output[players[i]] = new List<decimal>() { intSum, desimalSum };
             }
         }
 
         foreach (var item in output)
         {
-            Console.WriteLine($"{item.Key} - {item.Value[0]} health, {item.Value[1] * 2 * 2:f2} damage");
+            Console.WriteLine($"{item.Key} - {item.Value[0]} health, {item.Value[1]:f2} damage");
         }
     }
     public static decimal[] getDesimal(string input)
