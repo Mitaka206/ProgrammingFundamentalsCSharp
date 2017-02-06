@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace p04_DistanceBetweenPoints
 {
-    class point
+    class Point
     {
+        public double X { get; set; }
+
+        public double Y { get; set; }
     }
 }

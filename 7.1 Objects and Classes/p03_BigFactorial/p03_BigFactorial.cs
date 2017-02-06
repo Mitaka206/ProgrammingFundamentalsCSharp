@@ -7,12 +7,13 @@ namespace p03_BigFactorial
     {
         static void Main(string[] args)
         {
-            int input = int.Parse(Console.ReadLine());
-            Console.WriteLine(Factorial(input));
+            BigInteger nput = int.Parse(Console.ReadLine());
+            Console.WriteLine(Factorial(nput));
         }
-        private static BigInteger Factorial(int n)
+
+        private static BigInteger Factorial(BigInteger n)
         {
-            int num = 1;
+            BigInteger num = 1;
             do
             {
                 num = num * n;

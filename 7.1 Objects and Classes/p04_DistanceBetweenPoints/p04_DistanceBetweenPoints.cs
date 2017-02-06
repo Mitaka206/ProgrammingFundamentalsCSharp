@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace p04_DistanceBetweenPoints
 {
-    class Program
+    class p04_DistanceBetweenPoints
     {
         static void Main(string[] args)
         {
