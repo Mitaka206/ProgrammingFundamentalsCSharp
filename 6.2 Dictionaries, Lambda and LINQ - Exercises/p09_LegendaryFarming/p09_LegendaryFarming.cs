@@ -58,11 +58,20 @@ namespace p09_LegendaryFarming
                     }
                 }
             }
-
             foreach (var item in output.OrderByDescending(x => x.Value).ThenBy(x => x.Key))
             {
-                
+                if (item.Key == "motes" || item.Key == "fragments" || item.Key == "shards")
+                {
                     Console.WriteLine($"{item.Key}: {item.Value}");
+                }
+            }
+
+            foreach (var item in output.OrderBy(x => x.Key))
+            {
+                if (item.Key != "motes" && item.Key != "fragments" && item.Key != "shards")
+                {
+                    Console.WriteLine($"{item.Key}: {item.Value}");
+                }
             }
         }
     }
