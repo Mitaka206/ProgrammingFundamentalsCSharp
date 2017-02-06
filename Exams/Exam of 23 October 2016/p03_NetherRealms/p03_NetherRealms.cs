@@ -9,24 +9,29 @@ class p03_NetherRealms
     {
         string input = Console.ReadLine();
 
-        var output = new SortedDictionary<string, Dictionary<int, decimal>>();
+        var output = new SortedDictionary<string, List<decimal>>();
 
         var players = input.Split(new char[] { ',', ' ' }, StringSplitOptions.RemoveEmptyEntries).ToList();
 
         for (int i = 0; i < players.Count; i++)
         {
             var toChar = players[i].Where(c => Char.IsLetter(c)).ToList();
-            var intSum = toChar.Select(c => (int)c).Sum();
+            var intSum = toChar.Select(c => (decimal)c).Sum();
             
             var toDesimal = getDesimal(players[i]).ToList();
             var desimaSum = toDesimal.Sum();
 
-            Console.WriteLine($"{players[i]} - {intSum} health, {desimaSum*2*2:f2} damage");
+            var skils = new List<decimal>() { intSum, desimaSum };
 
             if (!output.ContainsKey(players[i]))
             {
-               // output[players[i]].Add(intSum);
+                output[players[i]] = skils;
             }
+        }
+
+        foreach (var item in output)
+        {
+            Console.WriteLine($"{item.Key} - {item.Value[0]} health, {item.Value[1] * 2 * 2:f2} damage");
         }
     }
     public static decimal[] getDesimal(string input)
