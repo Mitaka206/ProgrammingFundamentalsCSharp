@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0F02F1A3-E130-4561-83DA-4EA8A9CF4F0B}</ProjectGuid>
+    <ProjectGuid>{1972D4F3-C59A-4A24-8C39-580D16916356}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>p01_DayOfWeek</RootNamespace>
-    <AssemblyName>p01_DayOfWeek</AssemblyName>
+    <RootNamespace>p00_Demo</RootNamespace>
+    <AssemblyName>p00_Demo</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="p01_DayOfWeek.cs" />
+    <Compile Include="Cat.cs" />
+    <Compile Include="p00_Demo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
