@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace p04_Files
 {
-    class Program
+    class p04_Files
     {
         static void Main(string[] args)
         {
@@ -23,12 +23,13 @@ namespace p04_Files
                 string fileName = filesAndSize[1];
                 string isPlace = filesAndSize.Last();
 
+                var fileType = input.Split(new char[] { '.', ';' }, StringSplitOptions.RemoveEmptyEntries).Take(2);
+
                 if (!output.ContainsKey(isPlace))
                 {
                     output[isPlace] = new SortedDictionary<string, string>();
                     output[isPlace][fileName] = string.Empty;
                 }
-
                 output[isPlace][fileName] = size;
             }
 
@@ -40,9 +41,12 @@ namespace p04_Files
 
             foreach (var item in output)
             {
-                foreach (var items in item.Value)
+                if (item.Key == place)
                 {
-                    Console.WriteLine($"{items.Key} - {items.Value} KB");
+                    foreach (var fileSize in item.Value)
+                    {
+                        Console.WriteLine($"{fileSize.Key} - {fileSize.Value} KB");
+                    }
                 }
             }
         }

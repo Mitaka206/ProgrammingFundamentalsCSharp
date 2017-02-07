@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-namespace p03_RageQuit //https://judge.softuni.bg/Contests/Practice/DownloadResource/1655
+namespace p03_RageQuit 
 {
     class p03_RageQuit
     {
@@ -11,7 +11,8 @@ namespace p03_RageQuit //https://judge.softuni.bg/Contests/Practice/DownloadReso
         {
             var input = Console.ReadLine().ToUpper();
 
-            var numbers = input.Where(c => char.IsDigit(c)).ToList();
+            var numbers = Regex.Split(input, @"\D+").Skip(1).Select(int.Parse).ToList(); // get numbers - 2, 5, 1
+            //var numbers = input.Where(c => char.IsDigit(c)).Select(c => int.Parse(c.ToString())).ToList(); // get numbers - 2, 5, 1
 
             var uniqueSymbols = Regex.Replace(input, @"[\d-]", string.Empty)
                 .Distinct()
@@ -23,7 +24,7 @@ namespace p03_RageQuit //https://judge.softuni.bg/Contests/Practice/DownloadReso
 
             for (int i = 0; i < numbers.Count; i++)
             {
-                for (int j = 0; j < int.Parse(numbers[i].ToString()); j++)
+                for (int j = 0; j < numbers[i]; j++)
                 {
                     output.Add(strings[i]);
                 }
