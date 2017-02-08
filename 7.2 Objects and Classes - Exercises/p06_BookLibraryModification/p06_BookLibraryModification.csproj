@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{125DEFCD-5A14-4E96-9859-B7E61B92FC1D}</ProjectGuid>
+    <ProjectGuid>{FFA5E799-1FCC-41E4-9736-72DD03F1333B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>p05_BookLibrary</RootNamespace>
-    <AssemblyName>p05_BookLibrary</AssemblyName>
+    <RootNamespace>p06_BookLibraryModification</RootNamespace>
+    <AssemblyName>p06_BookLibraryModification</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Book.cs" />
-    <Compile Include="p05_BookLibrary.cs" />
+    <Compile Include="p06_BookLibraryModification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

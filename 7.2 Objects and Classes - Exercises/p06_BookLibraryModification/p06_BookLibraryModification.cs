@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Globalization;
 
-namespace p05_BookLibrary
+namespace p06_BookLibraryModification
 {
-    class p05_BookLibrary
+    class p06_BookLibraryModification
     {
         static void Main(string[] args)
         {
-
             List<Book> books = GetBooks();
             DateTime targetReleaseDate = DateTime.ParseExact(Console.ReadLine(), "dd.MM.yyyy", CultureInfo.InvariantCulture);
 
@@ -28,7 +27,7 @@ namespace p05_BookLibrary
                                             .ToArray();
 
                 foreach (DateTime bookReleaseDate in bookReleaseDates)
-                    Console.WriteLine("{0} -> {1:dd.MM.yyyy}", title, bookReleaseDate);// for remove
+                    Console.WriteLine("{0} -> {1:dd.MM.yyyy}", title, bookReleaseDate);
             }
         }
 

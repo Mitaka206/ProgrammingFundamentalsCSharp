@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p05_BookLibrary", "p05_Book
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p07_AndreyAndBilliard", "p07_AndreyAndBilliard\p07_AndreyAndBilliard.csproj", "{D72A5C21-FD0E-462B-BD1C-31F1A5160CC6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p06_BookLibraryModification", "p06_BookLibraryModification\p06_BookLibraryModification.csproj", "{FFA5E799-1FCC-41E4-9736-72DD03F1333B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p11_StudentGroup", "p11_StudentGroup\p11_StudentGroup.csproj", "{F2BDCA3A-BFEE-4FD6-81B5-236C81C206BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{D72A5C21-FD0E-462B-BD1C-31F1A5160CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D72A5C21-FD0E-462B-BD1C-31F1A5160CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D72A5C21-FD0E-462B-BD1C-31F1A5160CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFA5E799-1FCC-41E4-9736-72DD03F1333B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFA5E799-1FCC-41E4-9736-72DD03F1333B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFA5E799-1FCC-41E4-9736-72DD03F1333B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFA5E799-1FCC-41E4-9736-72DD03F1333B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2BDCA3A-BFEE-4FD6-81B5-236C81C206BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2BDCA3A-BFEE-4FD6-81B5-236C81C206BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2BDCA3A-BFEE-4FD6-81B5-236C81C206BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2BDCA3A-BFEE-4FD6-81B5-236C81C206BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
