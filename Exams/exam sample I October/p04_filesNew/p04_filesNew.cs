@@ -10,7 +10,7 @@ namespace p04_filesNew
         {
             int n = int.Parse(Console.ReadLine());
             var filesAndSize = new List<string>();
-            var output = new Dictionary<SortedDictionary<string, string>, SortedDictionary<string, string>>();
+            var output = new Dictionary<Dictionary<string, string>, SortedDictionary<string, string>>();
 
             for (int i = 0; i < n; i++)
             {
@@ -24,8 +24,11 @@ namespace p04_filesNew
                 var inType = filesAndSize[1];
                 var fileName = filesAndSize[2];
                 var sizeFile = filesAndSize[0];
-                var name = new List<string> { filesAndSize[1], filesAndSize[2] }.ToString();
-                var dic = new SortedDictionary<string, string>();
+
+                var filesn = input.Split(new char[] { ' ', ';', '\\' }, StringSplitOptions.RemoveEmptyEntries).Reverse().ToArray();
+                string name = filesn[1];
+
+                var dic = new Dictionary<string, string>();
                 var val = new SortedDictionary<string, string>();
 
                 if (!dic.ContainsKey(folderName))
@@ -46,6 +49,7 @@ namespace p04_filesNew
             string type = commandLine[0];
             string folder = commandLine[2];
 
+
             foreach (var item in output)
             {
                 foreach (var item1 in item.Key)
@@ -59,6 +63,8 @@ namespace p04_filesNew
                     }
                 }
             }
+            // Console.WriteLine("No");
+
         }
     }
 }
