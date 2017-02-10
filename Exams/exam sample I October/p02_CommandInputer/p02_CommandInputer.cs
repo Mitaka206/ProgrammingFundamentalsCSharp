@@ -18,35 +18,40 @@ namespace p02_CommandInputer
                 int start = int.Parse(commandLine[2]);
                 int count = int.Parse(commandLine[4]);
 
-                if (start >= 0 && count >= 0 && start <= 20 && count <= 20)
+
+                if (command == "reverse")
                 {
-                    if (command == "reverse")
+                    if (start >= 0
+                    || count >= 0
+                    || start <= 20
+                    || count <= 20)
                     {
-                        var part = arrayForChange.Skip(start).Take(count).Reverse().ToArray();
-                        string[] output = ConcatMethod(arrayForChange, start, count, part);
-
-                        Console.WriteLine($"[{string.Join(", ", output)}]");
+                        Console.WriteLine("Invalid input parameters.");
+                        break;
                     }
-                    if (command == "sort")
-                    {
-                        var part = arrayForChange.Skip(start).Take(count).OrderBy(x => x).ToArray();
-                        string[] output = ConcatMethod(arrayForChange, start, count, part);
 
-                        Console.WriteLine($"[{string.Join(", ", output)}]");
-                    }
-                    if (command == "rollLeft")
-                    {
+                    var part = arrayForChange.Skip(start).Take(count).Reverse().ToArray();
+                    string[] output = ConcatMethod(arrayForChange, start, count, part);
 
-                    }
-                    if (command == "rollRigh")
-                    {
-
-                    }
+                    Console.WriteLine($"[{string.Join(", ", output)}]");
                 }
-                else
+                if (command == "sort")
                 {
-                    Console.WriteLine("Invalid input parameters.");
+                    var part = arrayForChange.Skip(start).Take(count).OrderBy(x => x).ToArray();
+                    string[] output = ConcatMethod(arrayForChange, start, count, part);
+
+                    Console.WriteLine($"[{string.Join(", ", output)}]");
                 }
+                if (command == "rollLeft")
+                {
+
+                }
+                if (command == "rollRigh")
+                {
+
+                }
+
+
                 input = Console.ReadLine();
             }
         }

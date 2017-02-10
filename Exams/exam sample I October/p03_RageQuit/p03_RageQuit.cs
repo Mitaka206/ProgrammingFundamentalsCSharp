@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace p03_RageQuit 
@@ -8,27 +8,23 @@ namespace p03_RageQuit
     class p03_RageQuit
     {
         static void Main(string[] args)
-        {
-            var input = Console.ReadLine().ToUpper();
+        {              
+            var input = Console.ReadLine().ToUpper();//jJlY$2@5y3 --> JJLY$2@5Y3
 
-            var numbers = Regex.Split(input, @"\D+").Skip(1).Select(int.Parse).ToList(); // get numbers - 2, 5, 1
-            //var numbers = input.Where(c => char.IsDigit(c)).Select(c => int.Parse(c.ToString())).ToList(); // get numbers - 2, 5, 1
+            Regex regex = new Regex(@"(\D+)(\d+)");// определяме двете групи(1)(2) от (НЕчисла)(числа)
 
-            var uniqueSymbols = Regex.Replace(input, @"[\d-]", string.Empty)
-                .Distinct()
-                .Count();
+            MatchCollection collection = regex.Matches(input);//разделяме на колекция  -> JJLY$2  @5  Y3  -> (гр1: JJLY @ Y) (гр2: 2 5 3)
+            
+            StringBuilder output = new StringBuilder();
 
-            var strings = Regex.Split(input, @"\d+").ToList(); //get strings - ASD, &, S@
-
-            var output = new List<string>();
-
-            for (int i = 0; i < numbers.Count; i++)
+            foreach (Match item in collection)
             {
-                for (int j = 0; j < numbers[i]; j++)
+                for (int i = 0; i < int.Parse(item.Groups[2].ToString()); i++)
                 {
-                    output.Add(strings[i]);
+                    output.Append(item.Groups[1]);//долепяме item пъти (2;5;3)
                 }
             }
+            var uniqueSymbols = output.ToString().Distinct().Count();// трябва да броим оутпута за по-сигърно
 
             Console.WriteLine($"Unique symbols used: {uniqueSymbols}");
             Console.WriteLine(string.Join("", output));

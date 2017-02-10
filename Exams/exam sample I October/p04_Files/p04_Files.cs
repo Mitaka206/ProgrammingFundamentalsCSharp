@@ -11,7 +11,7 @@ namespace p04_Files
 
             int n = int.Parse(Console.ReadLine());
 
-            var output = new Dictionary<string, SortedDictionary<string, string>>();
+            var output = new Dictionary<string, SortedDictionary<string, long>>();
 
             for (int i = 0; i < n; i++)
             {
@@ -19,35 +19,43 @@ namespace p04_Files
 
                 var filesAndSize = input.Split(new char[] { ' ', ';', '\\' }, StringSplitOptions.RemoveEmptyEntries).Reverse().ToArray();
 
-                string size = filesAndSize[0];
+                long size = long.Parse(filesAndSize[0]);
                 string fileName = filesAndSize[1];
-                string isPlace = filesAndSize.Last();
+                string root = filesAndSize.Last();
 
-                var fileType = input.Split(new char[] { '.', ';' }, StringSplitOptions.RemoveEmptyEntries).Take(2);
-
-                if (!output.ContainsKey(isPlace))
+                if (!output.ContainsKey(root))
                 {
-                    output[isPlace] = new SortedDictionary<string, string>();
-                    output[isPlace][fileName] = string.Empty;
+                    output[root] = new SortedDictionary<string, long>();
+                    output[root][fileName] = 0;
                 }
-                output[isPlace][fileName] = size;
+                output[root][fileName] = size;
             }
 
             var commandLine = Console.ReadLine().Split();
 
             string type = commandLine[0];
             string place = commandLine[2];
-            //-------------------------------------------------------------
+
+            bool areResult = false;
 
             foreach (var item in output)
             {
                 if (item.Key == place)
-                {
-                    foreach (var fileSize in item.Value)
+                {                                       // сортиране по стойност(Г-м) ако са равни по ключ
+                    foreach (var fileSize in item.Value.OrderByDescending(x => x.Value).ThenBy(i => i.Key))
                     {
-                        Console.WriteLine($"{fileSize.Key} - {fileSize.Value} KB");
+                        if (fileSize.Key.Contains(type))//NB test.exe contains "exe"
+                        {
+                            areResult = true;
+                            Console.WriteLine($"{fileSize.Key} - {fileSize.Value} KB");
+                        }
                     }
                 }
+            }
+
+            if (!areResult)
+            {
+                Console.WriteLine("No");
             }
         }
 

@@ -9,6 +9,7 @@ namespace p04_filesNew
         static void Main(string[] args)
         {
             int n = int.Parse(Console.ReadLine());
+
             var filesAndSize = new List<string>();
             var output = new Dictionary<Dictionary<string, string>, SortedDictionary<string, string>>();
 
@@ -20,6 +21,7 @@ namespace p04_filesNew
                     StringSplitOptions.RemoveEmptyEntries)
                     .Reverse()
                     .ToList();
+
                 var folderName = filesAndSize.Last();
                 var inType = filesAndSize[1];
                 var fileName = filesAndSize[2];

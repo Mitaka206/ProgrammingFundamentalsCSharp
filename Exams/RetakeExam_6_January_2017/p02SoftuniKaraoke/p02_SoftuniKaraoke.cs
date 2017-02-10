@@ -36,13 +36,21 @@ namespace p02SoftuniKaraoke
                 input = Console.ReadLine();
             }/// no chance
 
+            bool areAwards = false;
+
             foreach (var item in output)
             {
                 Console.WriteLine($"{item.Key}: {item.Value.Count} awards");
                 foreach (var items in item.Value)
                 {
+                    areAwards = true;
                     Console.WriteLine($"--{items}");
                 }
+            }
+
+            if (!areAwards)
+            {
+                Console.WriteLine("No awards");
             }
 
         }
