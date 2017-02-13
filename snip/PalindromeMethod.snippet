@@ -11,21 +11,18 @@
 			<Code Language="csharp">
 			<![CDATA[private static bool IsPalindrome(string word)
         {
-            int rightIndex = word.Length - 1;
-            int leftIndex = 0;
+            bool result = true;
 
-            bool isPalindrome = true;
-
-            while (rightIndex >= leftIndex)
+            for (int i = 0; i < word.Length / 2; i++)
             {
-                if (word[rightIndex] != word[leftIndex])
+                if (word[i] != word[word.Length - i - 1])
                 {
-                    isPalindrome = false;
+                    result = false;
+                    break;
                 }
-                rightIndex--;
-                leftIndex++;
             }
-            return isPalindrome;
+
+            return result;
         }]]>
 			</Code>
 		</Snippet>
