@@ -15,7 +15,7 @@ class p03_NetherRealms
 
         for (int i = 0; i < players.Count; i++)
         {
-            var toChar = players[i].Where(c => Char.IsLetter(c) || Char.IsSymbol(c)).ToList();// 
+            var toChar = players[i].Where(c => Char.IsLetter(c)).ToList();
             var intSum = toChar.Select(c => (decimal)c).Sum();
 
             var toDesimal = getDesimal(players[i]).ToList();
