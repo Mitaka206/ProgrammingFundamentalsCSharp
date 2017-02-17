@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace p00_Demo
 {
@@ -10,17 +8,34 @@ namespace p00_Demo
     {
         static void Main(string[] args)
         {
-            var text = "asd fsdf 322 3f32 ffdsf rfwrf3444";
+            var text = "asd df 322 3f32 ffdsf rfwrf3444");
+            
+            var regex = new Regex(@"[a-z]+");
 
-            var pattern = @"[A-z]\s";//?????????????
+            var digit = regex.Split(text);
+            
+            Console.WriteLine(string.Join(" ", digit));
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine(digit[1]);
+            Console.WriteLine();
+            Console.WriteLine();
 
-            var regex = new Regex(pattern);
+            //-------or
 
-            var digit = regex.Split(text)
-                .ToArray();
+            regex = new Regex(@"\d+");
 
+            var digit2 = regex.Matches(text);
 
-            Console.WriteLine(string.Join(" ", digit));     
+            foreach (Match item in digit2)
+            {
+                Console.Write("{0} ", item);
+            }
+
+            //---------or get count
+            Console.WriteLine();
+            Console.WriteLine(digit2.Count);
+
         }
     }
 }
