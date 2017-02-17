@@ -24,7 +24,7 @@ namespace p03_RageQuit
                     output.Append(item.Groups[1]);//долепяме item пъти (2;5;3)
                 }
             }
-            var uniqueSymbols = output.ToString().Distinct().Count();// трябва да броим оутпута за по-сигърно
+            var uniqueSymbols = output.ToString().Distinct().Count();// трябва да броим outpu за по-сигурно
 
             Console.WriteLine($"Unique symbols used: {uniqueSymbols}");
             Console.WriteLine(string.Join("", output));
