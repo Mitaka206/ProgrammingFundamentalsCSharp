@@ -9,10 +9,10 @@ namespace p03_EnduranceRally
         {
             var racers = Console.ReadLine().Split().ToArray();
             var forFuel = Console.ReadLine().Split().Select(double.Parse).ToArray();
-            var index = Console.ReadLine().Split().Select(long.Parse).ToArray();
+            var index = Console.ReadLine().Split().Select(int.Parse).ToArray();
 
             double sum = 0;
-            long zone = 0;
+            int zone = 0;
 
             for (int i = 0; i < racers.Length; i++)
             {
@@ -28,23 +28,20 @@ namespace p03_EnduranceRally
                     else
                     {
                         sum -= forFuel[j];
-                        if (sum < 0)
+
+                        if (sum <= 0)
                         {
                             zone = j;
+                            Console.WriteLine($"{racers[i]} - reached {zone}");
                             break;
                         }
                     }
                 }
 
-                if (sum < 0)
-                {
-                    Console.WriteLine($"{racers[i]} - reached {zone}");
-                }
-                else
+                if (sum > 0)
                 {
                     Console.WriteLine($"{racers[i]} - fuel left { sum:f2}");
                 }
-
             }
         }
     }

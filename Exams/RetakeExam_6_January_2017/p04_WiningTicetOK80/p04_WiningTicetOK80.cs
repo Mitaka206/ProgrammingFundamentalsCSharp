@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Linq;
 
-namespace p04_WiningTicetOK80
+namespace Winning_Ticket
 {
-    class p04_WiningTicetOK80
+    class WinningTicket
     {
         static void Main(string[] args)
         {
@@ -15,8 +15,7 @@ namespace p04_WiningTicetOK80
                 {
                     Console.WriteLine("invalid ticket");
                 }
-                else
-                if ((inputTicket[i].Contains("@")
+                else if ((inputTicket[i].Contains("@")
                     || inputTicket[i].Contains("#")
                     || inputTicket[i].Contains("^")
                     || inputTicket[i].Contains("$"))
@@ -39,7 +38,7 @@ namespace p04_WiningTicetOK80
                     {
                         Console.WriteLine($"ticket \"{ inputTicket[i] }\" - {count}{symbol}");
                     }
-                    if (count >= 10)
+                    if (count /2 == 10)
                     {
                         Console.WriteLine($"ticket \"{ inputTicket[i] }\" - 10{symbol} Jackpot!");
                     }

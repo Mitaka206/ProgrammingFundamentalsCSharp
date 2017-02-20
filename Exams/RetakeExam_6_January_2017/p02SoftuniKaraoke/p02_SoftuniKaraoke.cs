@@ -34,7 +34,7 @@ namespace p02SoftuniKaraoke
                 }
 
                 input = Console.ReadLine();
-            }/// no chance
+            }
 
             bool areAwards = false;
 
