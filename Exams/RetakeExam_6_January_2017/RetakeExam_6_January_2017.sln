@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p03_EnduranceRally", "p03_E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04_WinningTicket", "p04_WinningTicket\p04_WinningTicket.csproj", "{5B1B77C3-C470-4FDC-80A4-0C099F2185D6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "p04_WiningTicetOK80", "p04_WiningTicetOK80\p04_WiningTicetOK80.csproj", "{6481DA1C-1CC4-4709-9FB1-B86A9E101F01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{5B1B77C3-C470-4FDC-80A4-0C099F2185D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B1B77C3-C470-4FDC-80A4-0C099F2185D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B1B77C3-C470-4FDC-80A4-0C099F2185D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6481DA1C-1CC4-4709-9FB1-B86A9E101F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6481DA1C-1CC4-4709-9FB1-B86A9E101F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6481DA1C-1CC4-4709-9FB1-B86A9E101F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6481DA1C-1CC4-4709-9FB1-B86A9E101F01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
