@@ -16,7 +16,7 @@ namespace p04_RoliTheCoder
             while (line != "Time for Code")
             {
                 var groups = @"#[A-Za-z]*";
-                var coders = @"@[A-Za-z].*";
+                var coders = @"@[A-Za-z0-9].*";
 
                 var group = Regex.Match(line, groups).ToString();
 

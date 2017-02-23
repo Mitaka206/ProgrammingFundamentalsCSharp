@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 
 namespace p02_Ladybugs
@@ -10,69 +9,87 @@ namespace p02_Ladybugs
         {
             int sizeField = int.Parse(Console.ReadLine());
 
-            var field = new int[sizeField];
+            var ladybugs = new int[sizeField];
 
-            var bugPlace = Console.ReadLine()
+            var ladybugIndexes = Console.ReadLine()
                 .Split()
                 .Select(int.Parse)
-                .Where(b => b >= 0 && b <= sizeField)
-                .ToList();
+                .Where(b => b >= 0 && b < sizeField)
+                .ToArray();
 
+            for (int i = 0; i < ladybugIndexes.Length; i++)
+            {
+                ladybugs[ladybugs[i]] = 1;
+            }
             var line = Console.ReadLine();
 
             while (line != "end")
             {
-                var command = line.Split().ToArray();
+                var tokens = line.Split().ToArray();
 
-                var fromPosition = int.Parse(command[0]);
-                var lefOrRight = command[1];
-                var jump = int.Parse(command[2]);
+                var ladybugIndex = int.Parse(tokens[0]);
+                var lefOrRight = tokens[1];
+                var flyLen = int.Parse(tokens[2]);
 
-                field = FullField(field, bugPlace);// 1 0 1 pr
-                //---- for change==============================================
-                while (field[fromPosition] > 0 && field[fromPosition] < field.Length)
+                if (ladybugIndex < 0 || ladybugIndex >= ladybugs.Length)
                 {
-                    if (lefOrRight == "right")
-                    {
-                        if (field[fromPosition + jump] > field.Length || field[fromPosition + jump] == 1)
-                        {
-                            field[fromPosition] = 0;
-                        }
-                        else
-                        {
-                            field[fromPosition] = 1;
-                        }
-                    }
-
-                    if (lefOrRight == "left")
-                    {
-                        if (field[fromPosition - jump] < 0 || field[fromPosition - jump] == 1)
-                        {
-                            field[fromPosition] = 0;
-                        }
-                        else
-                        {
-                            field[fromPosition] = 1;
-                        }
-                    }
-                    break;
+                    line = Console.ReadLine();
+                    continue;
                 }
-                //---- for change================================================
+                if (ladybugs[ladybugIndex] == 0)
+                {
+                    line = Console.ReadLine();
+                    continue;
+                }
+
+                MoveLadybugs(ladybugs, ladybugIndex, flyLen, lefOrRight);
 
                 line = Console.ReadLine();
             }
-            Console.WriteLine(string.Join(" ", field));
+
+            Console.WriteLine(string.Join(" ", ladybugs));
         }
 
-        private static int[] FullField(int[] field, List<int> bugPlace)
+        public static void MoveLadybugs(int[] ladybugs, int ladybugIndex, int flyLen, string lefOrRight)
         {
-            var isBug = 1;
-            for (int i = 0; i < bugPlace.Count; i++)
+
+            ladybugs[ladybugIndex] = 0;
+
+            var foundPlace = false;
+
+            while (!foundPlace)
             {
-                field[bugPlace[i]] = isBug;
+                switch (lefOrRight)
+                {
+                    case "right":
+                        ladybugIndex += flyLen;
+                        break;
+                    case "left":
+                        ladybugIndex -= flyLen;
+                        break;
+                }
+
+                if (ladybugIndex >= ladybugs.Length || ladybugIndex < 0)
+                {
+                    foundPlace = true;
+                    continue;
+                }
+
+                if (ladybugs[ladybugIndex] == 1)
+                {
+                    continue;
+                }
+
+                if (ladybugs[ladybugIndex] == 0)
+                {
+                    ladybugs[ladybugIndex] = 1;
+                    foundPlace = true;
+                    continue;
+                }
             }
-            return field;
         }
+
     }
+        
 }
 
