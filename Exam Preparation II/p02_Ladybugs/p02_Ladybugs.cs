@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace p02_Ladybugs
 {
@@ -12,9 +10,13 @@ namespace p02_Ladybugs
         {
             int sizeField = int.Parse(Console.ReadLine());
 
-            var field = new string[sizeField];
+            var field = new int[sizeField];
 
-            var bug = Console.ReadLine().Split().Select(int.Parse).ToList();// index 
+            var bugPlace = Console.ReadLine()
+                .Split()
+                .Select(int.Parse)
+                .Where(b => b >= 0 && b <= sizeField)
+                .ToList();
 
             var line = Console.ReadLine();
 
@@ -23,23 +25,54 @@ namespace p02_Ladybugs
                 var command = line.Split().ToArray();
 
                 var fromPosition = int.Parse(command[0]);
-                var toPosition = int.Parse(command[2]);
                 var lefOrRight = command[1];
+                var jump = int.Parse(command[2]);
 
-
-                for (int i = 0; i < field.Length; i++)
+                field = FullField(field, bugPlace);// 1 0 1 pr
+                //---- for change==============================================
+                while (field[fromPosition] > 0 && field[fromPosition] < field.Length)
                 {
-                    if (fromPosition == bug.IndexOf(i))
+                    if (lefOrRight == "right")
                     {
-                        // NOOOOO non no onn o
+                        if (field[fromPosition + jump] > field.Length || field[fromPosition + jump] == 1)
+                        {
+                            field[fromPosition] = 0;
+                        }
+                        else
+                        {
+                            field[fromPosition] = 1;
+                        }
                     }
-                }
 
+                    if (lefOrRight == "left")
+                    {
+                        if (field[fromPosition - jump] < 0 || field[fromPosition - jump] == 1)
+                        {
+                            field[fromPosition] = 0;
+                        }
+                        else
+                        {
+                            field[fromPosition] = 1;
+                        }
+                    }
+                    break;
+                }
+                //---- for change================================================
 
                 line = Console.ReadLine();
             }
-            
-            
+            Console.WriteLine(string.Join(" ", field));
+        }
+
+        private static int[] FullField(int[] field, List<int> bugPlace)
+        {
+            var isBug = 1;
+            for (int i = 0; i < bugPlace.Count; i++)
+            {
+                field[bugPlace[i]] = isBug;
+            }
+            return field;
         }
     }
 }
+
