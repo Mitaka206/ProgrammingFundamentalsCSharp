@@ -18,25 +18,27 @@ namespace p02_ArrayManipulator
                 switch (command[0])
                 {
                     case "exchange":
-                        if (int.Parse(command[1]) < array.Count && int.Parse(command[1]) >= 0)
+                        if (int.Parse(command[1]) >= array.Count || int.Parse(command[1]) < 0)
                         {
-                            array = Exchange(array, command);
+                            Console.WriteLine("Invalid index");
                         }
                         else
                         {
-                            Console.WriteLine("Invalid index");
+                            array = Exchange(array, command);
                         }
                         break;
 
                     case "max":
-                        if (array.Any(d => d % 2 != 0) || array.Any(d => d % 2 == 0))
+                        if (!array.Any(d => d % 2 != 0) && !array.Any(d => d % 2 == 0))
                         {
-
+                            Console.WriteLine("No matches");
+                        }
+                        else
+                        {
                             var result = 0;
                             if (command[1] == "odd")
                             {
                                 result = array.LastIndexOf(array.Where(d => d % 2 != 0).Max());
-
 
                             }
                             if (command[1] == "even")
@@ -45,14 +47,14 @@ namespace p02_ArrayManipulator
                             }
                             Console.WriteLine(result);
                         }
-                        else
-                        {
-                            Console.WriteLine("No matches");
-                        }
                         break;
 
                     case "min":
-                        if (array.Any(d => d % 2 != 0) && array.Any(d => d % 2 == 0))
+                        if (!array.Any(d => d % 2 != 0) || !array.Any(d => d % 2 == 0))
+                        {
+                            Console.WriteLine("No matches");
+                        }
+                        else
                         {
                             var result = 0;
                             if (command[1] == "odd")
@@ -65,14 +67,14 @@ namespace p02_ArrayManipulator
                             }
                             Console.WriteLine(result);
                         }
-                        else
-                        {
-                            Console.WriteLine("No matches");
-                        }
                         break;
 
                     case "first":
-                        if (int.Parse(command[1]) <= array.Count)
+                        if (int.Parse(command[1]) > array.Count)
+                        {
+                            Console.WriteLine("Invalid count");
+                        }
+                        else
                         {
                             if (command[2] == "odd")
                             {
@@ -85,15 +87,15 @@ namespace p02_ArrayManipulator
                                 Console.WriteLine($"[{string.Join(", ", result)}]");
                             }
                         }
-                        else
-                        {
-                            Console.WriteLine("Invalid count");
-                        }
                         break;
 
                     case "last":
-                        if (int.Parse(command[1]) <= array.Count)
+                        if (int.Parse(command[1]) > array.Count)
                         {
+                            Console.WriteLine("Invalid count");
+                        }
+                        else
+                        {   
                             if (command[2] == "odd")
                             {
                                 var result = array.Where(d => d % 2 != 0).Reverse().Take(int.Parse(command[1])).ToList();
@@ -104,10 +106,6 @@ namespace p02_ArrayManipulator
                                 var result = array.Where(d => d % 2 == 0).Reverse().Take(int.Parse(command[1])).ToList();
                                 Console.WriteLine($"[{string.Join(", ", result)}]");
                             }
-                        }
-                        else
-                        {
-                            Console.WriteLine("Invalid count");
                         }
                         break;
                 }
