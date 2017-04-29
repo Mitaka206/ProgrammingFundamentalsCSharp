@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7646341E-9D9F-442C-B964-5B3D644854AA}</ProjectGuid>
+    <ProjectGuid>{6E156560-2DB7-481F-9AE8-CE34543A3ECC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>P3_HornetAssault</RootNamespace>
-    <AssemblyName>P3_HornetAssault</AssemblyName>
+    <RootNamespace>P1_SweetDessert</RootNamespace>
+    <AssemblyName>P1_SweetDessert</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="P3_HornetAssault.cs" />
+    <Compile Include="P1_SweetDessert.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

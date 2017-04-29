@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{415AC4C8-CA07-43A2-9551-36F11F728C16}</ProjectGuid>
+    <ProjectGuid>{C0D1D21B-A89A-4F1C-AAEB-9E428A419E4B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Exam_26._022017</RootNamespace>
-    <AssemblyName>Exam 26.022017</AssemblyName>
+    <RootNamespace>P3_FutballLeague</RootNamespace>
+    <AssemblyName>P3_FutballLeague</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="P3_FutballLeague.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

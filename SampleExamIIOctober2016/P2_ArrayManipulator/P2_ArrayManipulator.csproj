@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7646341E-9D9F-442C-B964-5B3D644854AA}</ProjectGuid>
+    <ProjectGuid>{2801FC0B-AC42-4804-BF49-09B362FDDCB6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>P3_HornetAssault</RootNamespace>
-    <AssemblyName>P3_HornetAssault</AssemblyName>
+    <RootNamespace>P2_ArrayManipulator</RootNamespace>
+    <AssemblyName>P2_ArrayManipulator</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="P3_HornetAssault.cs" />
+    <Compile Include="P2_ArrayManipulator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

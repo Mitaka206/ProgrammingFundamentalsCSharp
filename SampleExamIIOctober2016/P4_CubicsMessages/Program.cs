@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exam_26._022017
+namespace P4_CubicsMessages
 {
     class Program
     {
         static void Main(string[] args)
         {
+
         }
     }
 }

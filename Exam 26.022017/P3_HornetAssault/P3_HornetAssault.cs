@@ -1,10 +1,9 @@
-﻿
-namespace P3_HornetAssault
+﻿namespace P3_HornetAssault
 {
     using System;
     using System.Linq;
 
-    class Program
+    class P3_HornetAssault
     {
         static void Main(string[] args)
         {
